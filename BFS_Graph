@@ -1,0 +1,56 @@
+def bfs(graph, source):
+    vis = set()
+    queue = list()
+    bfs_traversal = list()
+
+    queue.append(source)
+    vis.add(source)
+
+    while(queue):
+        current_node = queue.pop(0)
+        bfs_traversal.append(current_node)
+    
+        for neighbor_node in graph[current_node]:
+            if neighbor_node not in vis:
+                vis.add(neighbor_node)
+                queue.append(neighbor_node)
+                
+    return bfs_traversal
+  
+def main():
+    # graph = {
+    #     'A': ['B', 'C', 'D'], 
+    #     'B': ['A', 'D', 'E'], 
+    #     'C': ['A', 'D'], 
+    #     'D': ['B', 'C', 'A', 'E'], 
+    #     'E': ['B', 'D']
+    # }
+
+    # bfs_traversal = bfs(graph, 'A')
+    
+    graph = {
+        1: [2, 3, 4],
+        2: [1, 5, 6],
+        3: [1],
+        4: [1, 7, 8],
+        5: [2, 9, 10],
+        6: [2],
+        7: [4, 11, 12],
+        8: [4],
+        9: [5],
+        10: [5],
+        11: [7],
+        12: [7]
+    }
+    
+    bfs_traversal = bfs(graph, 1)
+    
+    print(f"BFS: {bfs_traversal}")
+
+    
+if __name__=='__main__':
+    main()
+    
+    
+OUTPUT:
+BFS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
