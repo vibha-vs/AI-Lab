@@ -108,3 +108,24 @@ def vacuum_world():
 
 
 vacuum_world()
+
+
+OUTPUT:
+Enter Location of Vacuum
+A
+Enter status of A
+1
+Enter status of other room
+1
+Vacuum is placed in Location A
+Location A is Dirty.
+Cost for CLEANING A: 1
+Location A has been Cleaned.
+Location B is Dirty.
+Moving right to the Location B. 
+COST for moving RIGHT: 2
+COST for SUCK: 3
+Location B has been Cleaned. 
+GOAL STATE: 
+{'A': '0', 'B': '0'}
+Performance Measurement: 3
