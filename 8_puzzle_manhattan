@@ -115,3 +115,35 @@ class Puzzle:
 
 puz = Puzzle(3)
 puz.process()
+
+OUTPUT:
+Enter the starting state matrix 
+1 2 3
+4 5 6
+_ 7 8
+Enter the goal state matrix 
+1 2 3
+4 5 6
+7 8 _
+8-puzzle Problem using Heuristic Search and Manhattan distance
+
+1 2 3 
+4 5 6 
+ 7 8 
+
+Total moves : 0
+
+8-puzzle Problem using Heuristic Search and Manhattan distance
+
+1 2 3 
+4 5 6 
+7  8 
+Total moves : 1
+
+8-puzzle Problem using Heuristic Search and Manhattan distance
+
+1 2 3 
+4 5 6 
+7 8  
+
+Total moves : 2
